@@ -1,0 +1,18 @@
+<h2 class="text-primary" align="center">Show all book data....</h2>
+
+<table class="table table-bordered table-dark" align="center" style="width: 60%"  >
+    <tr>
+        <th>Book id </th>
+        <th>Book name</th>
+        <th>Book author</th>
+        <th>Bookyear</th>
+        <th>Button</th>
+    </tr>
+    <tr *ngFor="let bm of bookall">
+     <td>{{bm.bookid}}</td>
+     <td>{{bm.booktitle}}</td>
+     <td>{{bm.bookauthor}}</td>
+     <td>{{bm.bookyear}}</td>
+     <td><input type="button" class="btn btn-primary"value="Delete" (click)="empdelete()" ></td>
+     </tr>
+</table>

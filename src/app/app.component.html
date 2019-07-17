@@ -1,0 +1,40 @@
+﻿<br>
+<br>
+<br>
+
+<style>
+    th{
+        text-align:center;
+        color:green;
+        font:italic;
+    }
+    td{
+        text-align:center;
+        color:rgb(59, 94, 7);
+        font:italic;
+    }
+</style>
+
+<table border="1" align="center" style="background-color:honeydew;width:70%;height:70%;" >
+    <tr>
+        <th>Book ID</th>
+        <th>Book Title</th>
+        
+        <th>Book Author</th> 
+        <th>Book Year of Publish</th>
+    </tr>
+    <tr>
+        <th><input type="number" placeholder="ID" (keyup)="searchID(inputid.value)" #inputid></th>
+        <th><input type="text" placeholder="Book Title" (keyup)="searchTitle(inputtitle.value)" #inputtitle></th>
+        <th><input type="text" placeholder="Book Author" (keyup)="searchAuthor(inputauthor.value)" #inputauthor></th>
+        <th><input type="number" placeholder="Publish Year" (keyup)="searchPublishYear(inputyear.value)" #inputyear></th>
+        
+    </tr>
+    <tr *ngFor="let data of temp">
+        <td>{{data.id}}</td>
+        <td>{{data.title}}</td>
+        
+        <td>{{data.author}}</td>
+        <td>{{data.year}}</td>
+    </tr>
+</table>
